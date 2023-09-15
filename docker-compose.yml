@@ -1,0 +1,10 @@
+version: '3.0'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./dist:/usr/share/nginx/html/admin
